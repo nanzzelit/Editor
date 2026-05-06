@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply antialiased overflow-hidden bg-[#1e1e1e] text-[#cccccc];
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  html {
+    height: 100%;
+    margin: 0;
+  }
+  #root {
+    @apply h-full w-full flex flex-col;
+  }
+}
+
+/* Scrollbar styling for sleek look */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 5px;
+  border: 2px solid #1e1e1e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4f4f4f;
+}
